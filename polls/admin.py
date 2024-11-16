@@ -23,6 +23,10 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ["pub_date"]
     search_fields = ["question_text"]
     
+    # # only allow superusers to view the question model.
+    # def has_module_permission(self, request):
+    #     return super().has_module_permission(request)
+    
 
     # this tells django that Choice objects are edited on the Question page.
 

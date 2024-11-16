@@ -9,6 +9,8 @@ def welcome(request):
 urlpatterns = [
     path("", welcome),
     path("polls/", include("polls.urls")),
+    path("auth/", include('accounts.urls')),
     path("admin/", admin.site.urls),
+    
 ]
 
